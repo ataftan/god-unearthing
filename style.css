@@ -1,0 +1,170 @@
+@font-face {
+  font-family: FT88;
+  src: url(FT88-Regular.tff);
+
+}
+
+@font-face {
+  font-family: Director;
+  src: url(Director-Regular.tff);
+
+}
+
+body, html {
+    box-sizing:  border-box;
+    margin-top: 20px;
+    padding: 1em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: FT88 ;
+}
+.main {
+  position: relative;
+
+}
+
+
+::-webkit-scrollbar {display: none;}
+
+
+.fixhead {
+  position: fixed;
+}
+
+h4 {
+  margin-bottom: -1px;
+}
+.info {
+  float: left;
+  max-width: 20%;
+  justify-content: space-around;
+  font-style: italic;
+  font-size:1.6vw;
+  overflow-y: scroll; 
+
+}
+
+.fixhead, .about, .info, .abouted, h1 {
+  pointer-events: none;
+}
+/* .about{
+    display: inline;
+
+}
+.about:hover + .info{
+  display: block;
+}
+
+.about:hover {
+font-style: italic;} */
+
+
+
+
+.layout {
+  display: grid;
+  grid-template-rows: repeat (5, 1fr);
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+ justify-content: center;
+ text-align: center;
+ row-gap: 7em;
+}
+
+
+
+ .image-container{
+  place-content: center;
+  margin: 5em auto; */
+  width: 500px;
+  height: 500px;
+
+}
+.image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.clone-image {
+  position: absolute;
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  max-height: 90%;
+  z-index: 1001;
+  pointer-events: none;
+  filter:drop-shadow(0 0 0.45rem grey);
+  }
+
+.caption {
+  font-size: 0.9rem;
+  font-style: italics;
+  font-family: Garamond;
+  letter-spacing: 1.5px;
+}
+
+
+
+/*----MEDIA QUERIES---*/
+
+
+
+@media only screen and (min-width:1225px) {
+.info{
+  font-size:1.4vw;
+}
+
+}
+
+  @media only screen and (max-width:893px) {
+.layout {
+  float: right;
+}
+
+}
+
+
+@media only screen and (max-width:700px) {
+    .image-container{
+      width: 400px;
+      height: 400px;
+    }
+}
+  @media only screen and (max-width:689px) {
+  .info {
+ /* max-width: 25%; */ */
+text-align: left;
+
+  
+  }
+
+
+  @media only screen and (max-width:480px) {
+    .image-container{
+      width: 250px;
+      height: 250px;
+    }
+    .info{
+      font-size: 2vw;
+      float: left;
+    }
+}
+
+
+@media only screen and (max-width:412px) {
+    body, html {
+      margin-top:4px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
